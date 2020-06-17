@@ -1,5 +1,5 @@
 import * as encoding from "./dist/encoding_wasm.js";
-import wasm from './dist/encoding_wasm_bytes.js';
+import wasm from "./dist/encoding_wasm_bytes.js";
 
 // Load WASM
 await encoding.default(wasm);
