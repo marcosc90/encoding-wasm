@@ -68,7 +68,7 @@ bench(function base64EncodeToStrWasm(b) {
 
 bench(function base64EncodeToStrSTD(b) {
   b.start();
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < 1e6; i++) {
     encodeStd(input.buffer);
   }
   b.stop();
@@ -94,7 +94,7 @@ bench(function base64DecodeWasmImageStr(b) {
 
 bench(function base64DecodeSTDImageStr(b) {
   b.start();
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < 100; i++) {
     new Uint8Array(decodeStd(b64imageStr));
   }
   b.stop();
